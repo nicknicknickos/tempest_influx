@@ -112,6 +112,7 @@ func tempest_obs_st(report Report, m *InfluxData) {
 	m.Fields = map[string]string{
 		"battery":            fmt.Sprintf("%.2f", obs.Battery),
 		"dew_point":          fmt.Sprintf("%.2f", dp),
+		"humidity":           fmt.Sprintf("%.2f", obs.RelativeHumidity),
 		"illuminance":        fmt.Sprintf("%d", obs.Illuminance),
 		"p":                  fmt.Sprintf("%.2f", obs.StationPressure),
 		"precipitation":      fmt.Sprintf("%.2f", obs.PrecipitationAccumulation),
